@@ -1,2 +1,2 @@
 # reciclemos_poruna_sonrisa
-Reciclemos por una Sonrisa, es un proyecto de venta de productos reciclados.
+ Let's recycle for a smile, it's a project to sell recycled products.
