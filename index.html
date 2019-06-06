@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="shortcut icon" href="bootstrap/img/favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link rel="stylesheet" href="css/estilo.css">
+
+  
+<script>
+
+  //scroll
+  $(document).ready(function(){
+
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+
+  $("#myNavbar a").on('click', function(event) {
+  
+    if (this.hash !== "") {
+  
+      event.preventDefault();
+
+      var hash = this.hash;
+
+     
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+       
+        window.location.hash = hash;
+      });
+    }  
+  });
+});
+
+  //
+
+    $(document).ready(function(){
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+
+    //scrolldenav//
+
+ $(function() {
+    $(window).scroll(function() {
+      console.log($(window).scrollTop());
+      if ($(window).scrollTop() > 180){
+        $("#logo_1").fadeIn('slow'); 
+      }else{
+        $("#logo_1").hide(); 
+      }
+    });
+  });
+
+ //modal
+   $(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });     
+});
+  </script>
+
+ 
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <div class="container-fluid">
+     <img id="logo_1" src="img/pagina/logo2.png" style="float: left; display: none; padding-top:5px;" alt="">
+    <a href="#"  style="float: right; padding-top:8px; " id="myBtn"><span class="glyphicon glyphicon-log-in"></span></a>
+
+   
+
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      
+
+    </div>
+   
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+
+   
+          <li><a class="" href="#section1" style="margin-top: 5px";">INICIO</a></li>
+          <li><a class="menu" href="#section2" style="margin-top: 5px";">NOTICIAS</a></li>
+          <li><a class="menu" href="#section3" style="margin-top: 5px";">QUIENES SOMOS</a></li>
+          <li><a class="menu"  href="#section4" style="margin-top: 5px";">UBICACION</a></li>
+          <li><a class="menu"  href="#section5" style="margin-top: 5px";">PRODUCTOS</a></li>
+
+         
+        </ul>
+      </div>
+
+    </div>
+
+</nav>    
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Ingreso</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> USUARIO</label>
+              <input type="text" class="form-control" id="usrname" placeholder="rociomini25@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> CONTRASEÑA</label>
+              <input type="text" class="form-control" id="psw" placeholder="*******">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Recuerdame</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Ingresar</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+        
+          <p style="text-align:center">No estas registrado? <a href="formularioderegistroo.html" target="_blank">Registrarse</a></p>
+          <p style="text-align:center" target="_blank">No recuerdo mi  <a href="recuperaciondeclave.html">Contraseña?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+
+
+<div id="section1" class="container-fluid hidden-xs " style="background-image: url(img/pagina/Portada2.png);">
+    <img id="logo" src="img/pagina/logo02.png" alt="">
+  
+
+</div>
+
+      
+
+<div  id="section2" class="container gal-container" style="
+  padding-bottom: 0px;">
+
+   
+        <h3 class="titulo1">NOTICIAS</h3>
+        <br>
+        
+    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+      <div class="box">
+
+          <img src="img/pagina/slidereditado.jpg" >
+          <div  class="texto-encima"><a target="_blank" style="color:white;" href="https://www.google.com/" >La importancia de Sonreir </a></div>
+
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        
+          <img src="img/pagina/3.webp">
+          <div  class="texto-encima"><a target="_blank" style="color:white;" href="https://www.google.com/" >Cuanto sabes de los arboles? </a></div>
+
+      </div>
+    </div>
+    
+           
+    <div class="col-md-4 col-sm-12 co-xs-12 gal-item">
+      <div class="box">
+
+          <img src="img/pagina/giphy (2).webp" >
+          <div  class="texto-encima"><a target="_blank" style="color:white;" href="https://www.google.com/" >Comencemos un Proyecto</a></div>
+
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        
+          <img src="img/pagina/giphy 5.webp">
+          <div  class="texto-encima"><a target="_blank" style="color:white;" href="https://www.google.com/" >La Hora de la Tierra </a></div>
+
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        
+          <img src="img/pagina/giphy6.webp">
+          <div  class="texto-encima"><a target="_blank" style="color:white;" href="https://www.google.com/" >Las Plantas </a></div>
+
+      </div>
+    </div>
+
+</div>
+
+<div id="section3" class="container-fluid">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+       <h3 class="titulo2">QUIENES SOMOS</h3>
+       <br>
+             <div class="video">
+                  <iframe class="" width="100%" height="515" src="https://www.youtube.com/embed/oRUtkvAKWnI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<div id="section6" class="container-fluid" style="background-color:black; height:300px">
+   <div class="container">
+    <div class="row" style="    margin-left: 100px; padding-top: 5%;
+">
+      <br>
+      <br>
+      <div class="col-md-1"></div>
+       <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <a href=" https://https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt=""></a>
+
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.facebook.com/"  target="_blank"><img src="img/facebook.png" alt=""></a>
+     
+
+      </div>
+      <div class="col-md-3">
+        <a href="https://www.twitter.com/" target="_blank"><img src="img/gorjeo.png" alt=""></a>
+      </div>
+
+
+            <div class="col-md-1"></div>
+
+    </div>  
+       <p style="margin-top:30px; margin-left:47%;"> +54 2664260921</p>
+  </div>
+  <br><br>
+
+
+
+</div>
+  
+
+<div id="section4" class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+
+         <h3 class="titulo2">UBICACION</h3>
+       <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6477.0355388788275!2d-66.35020389649256!3d-33.334145671707496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d43beb560b0565%3A0x3cf1760f6dcd3796!2sAv.+Maestras+Lucio+Lucero%2C+San+Luis!5e0!3m2!1ses-419!2sar!4v1543531309997" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+  
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="section5" class="container-fluid">
+       <h3 class="titulo3"> PRODUCTOS</h3>
+       <br><br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+        <div class="col-md-10">
+          <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/69.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">SOFÁ AWAY</h6>
+           
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?DocumentId=35&acceso_producto=resultados#.W9DKnGhKhPZ" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+      
+          </div> 
+          <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/224.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">BOTELLA</h6>
+        
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?hd_buscar_Documents=1&pagina=2&DocumentId=92&acceso_producto=resultados#.W9DNbWhKhPZ" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+           
+          </div>
+          <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/203.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">REVISTEROS</h6>
+              
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?hd_buscar_Documents=1&pagina=2&DocumentId=87&acceso_producto=resultados#.W9DNAmhKhPY" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+           
+          </div>
+           <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/222.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">CAMA</h6>
+            
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?hd_buscar_Documents=1&pagina=2&DocumentId=91&acceso_producto=resultados#.W9DNQGhKhPY" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+           </div>
+            <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/133.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">LAMPARA DE MESA </h6>
+              
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?DocumentId=59&acceso_producto=resultados#.W9DMemhKhPZ" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+          
+            </div>
+              <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/111.jpg" alt="" />
+              <div class="portfolio_images_overlay text-centero">
+                <h6 class="clrd-font">MUEBLE ECOLOGICO</h6>
+                
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?hd_buscar_Documents=1&pagina=4&DocumentId=52&acceso_producto=resultados#.W9DM7mhKhPZ" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+             
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/96.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">CUENCO</h6>
+    
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp?hd_buscar_Documents=1&pagina=4&DocumentId=47&acceso_producto=resultados#.W9DPnmhKhPY" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+              
+          </div>
+                <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+              <img src="img/pagina/195.jpg" alt="" />
+              <div class="portfolio_images_overlay text-center">
+                <h6 class="clrd-font">MACETAS</h6>
+            
+                <a href="http://www.ikobay.com/objetos_ecologicos/documents_detalle.asp ?hd_buscar_Documents=1&pagina=2&DocumentId=85&acceso_producto=resultados#.W9DM7GhKhPZ" class="btn btn-primary" target="_blank">Comprar</a>
+              </div>
+              
+          </div>
+
+
+      <div class="col-md-1">
+        </div>
+
+    </div>  
+  </div> 
+</div>
+</div>
+
+
+  
+
+
+
+
+
+</body>
+</html>
